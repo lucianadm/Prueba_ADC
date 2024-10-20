@@ -37,41 +37,41 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -96 224 72 240)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "areset" (rect 5 0 35 12)(font "Arial" ))
-	(pt 168 8)
+	(rect -328 488 -120 504)
+	(text "INPUT" (rect 165 0 193 10)(font "Arial" (font_size 6)))
+	(text "SENSOR_DER[11..0]" (rect 5 0 113 12)(font "Arial" ))
+	(pt 208 8)
 	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
+		(line (pt 124 12)(pt 149 12))
+		(line (pt 124 4)(pt 149 4))
+		(line (pt 153 8)(pt 208 8))
+		(line (pt 124 12)(pt 124 4))
+		(line (pt 149 4)(pt 153 8))
+		(line (pt 149 12)(pt 153 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 168 7 188 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(input)
-	(rect 200 440 368 456)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Der_Cerca" (rect 5 0 58 12)(font "Arial" ))
-	(pt 168 8)
+	(rect -352 648 -152 664)
+	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
+	(text "SENSOR_IZQ[11..0]" (rect 5 0 108 12)(font "Arial" ))
+	(pt 200 8)
 	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
+		(line (pt 116 12)(pt 141 12))
+		(line (pt 116 4)(pt 141 4))
+		(line (pt 145 8)(pt 200 8))
+		(line (pt 116 12)(pt 116 4))
+		(line (pt 141 4)(pt 145 8))
+		(line (pt 141 12)(pt 145 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 160 7 180 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(input)
-	(rect 200 456 368 472)
+	(rect -432 216 -264 232)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Izq_Cerca" (rect 5 0 54 12)(font "Arial" ))
+	(text "reset" (rect 5 0 30 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -136,6 +136,38 @@ applicable agreement for further details.
 	(rect 552 424 728 440)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MI[1..0]" (rect 90 0 127 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 80 448 256 464)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "sens_Der" (rect 90 0 137 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 184 648 360 664)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "sens_Izq" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -284,6 +316,76 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect -120 448 56 528)
+	(text "Comparador" (rect 5 0 65 12)(font "Arial" ))
+	(text "inst4" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 27 45 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "entrada[11..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "entrada[11..0]" (rect 21 43 89 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 132 27 160 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32))
+	)
+	(parameter
+		"VALOR"
+		"2048"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 160 64))
+	)
+	(annotation_block (parameter)(rect -128 400 56 432))
+)
+(symbol
+	(rect -104 608 72 688)
+	(text "Comparador" (rect 5 0 65 12)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 27 45 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "entrada[11..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "entrada[11..0]" (rect 21 43 89 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 132 27 160 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32))
+	)
+	(parameter
+		"VALOR"
+		"2048"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 160 64))
+	)
+	(annotation_block (parameter)(rect -104 568 80 600))
+)
 (connector
 	(pt 704 200)
 	(pt 704 176)
@@ -313,14 +415,6 @@ applicable agreement for further details.
 	(pt 120 416)
 )
 (connector
-	(pt 120 416)
-	(pt 120 232)
-)
-(connector
-	(pt 72 232)
-	(pt 120 232)
-)
-(connector
 	(pt 120 232)
 	(pt 160 232)
 )
@@ -348,5 +442,94 @@ applicable agreement for further details.
 	(pt 288 184)
 	(pt 264 184)
 )
+(connector
+	(pt 56 480)
+	(pt 64 480)
+)
+(connector
+	(pt 64 456)
+	(pt 80 456)
+)
+(connector
+	(pt -152 656)
+	(pt -104 656)
+	(bus)
+)
+(connector
+	(pt 176 640)
+	(pt 176 656)
+)
+(connector
+	(pt 176 656)
+	(pt 184 656)
+)
+(connector
+	(pt 368 448)
+	(pt 64 448)
+)
+(connector
+	(pt 64 448)
+	(pt 64 456)
+)
+(connector
+	(pt 64 456)
+	(pt 64 480)
+)
+(connector
+	(pt 368 464)
+	(pt 184 464)
+)
+(connector
+	(pt 184 640)
+	(pt 184 464)
+)
+(connector
+	(pt 72 640)
+	(pt 176 640)
+)
+(connector
+	(pt 176 640)
+	(pt 184 640)
+)
+(connector
+	(pt 120 224)
+	(pt 120 232)
+)
+(connector
+	(pt 120 232)
+	(pt 120 416)
+)
+(connector
+	(pt -120 480)
+	(pt -208 480)
+)
+(connector
+	(pt -208 480)
+	(pt -208 224)
+)
+(connector
+	(pt 120 224)
+	(pt -208 224)
+)
+(connector
+	(pt -104 640)
+	(pt -256 640)
+)
+(connector
+	(pt -256 640)
+	(pt -256 224)
+)
+(connector
+	(pt -208 224)
+	(pt -256 224)
+)
+(connector
+	(pt -256 224)
+	(pt -264 224)
+)
 (junction (pt 120 232))
 (junction (pt 288 184))
+(junction (pt 64 456))
+(junction (pt 176 640))
+(junction (pt -208 224))
+(junction (pt -256 224))

@@ -2,13 +2,39 @@
 locked <= PLL:inst.locked
 inclk0 => PLL:inst.inclk0
 inclk0 => Motor_c_ADCs:inst1.clock
-areset => inst3.IN0
-areset => Motor_c_ADCs:inst1.reset
+reset => inst3.IN0
+reset => Comparador:inst4.reset
+reset => Comparador:inst5.reset
+reset => Motor_c_ADCs:inst1.reset
 PWM <= PLL:inst.c0
+sens_Der <= Comparador:inst4.salida
+SENSOR_DER[0] => Comparador:inst4.entrada[0]
+SENSOR_DER[1] => Comparador:inst4.entrada[1]
+SENSOR_DER[2] => Comparador:inst4.entrada[2]
+SENSOR_DER[3] => Comparador:inst4.entrada[3]
+SENSOR_DER[4] => Comparador:inst4.entrada[4]
+SENSOR_DER[5] => Comparador:inst4.entrada[5]
+SENSOR_DER[6] => Comparador:inst4.entrada[6]
+SENSOR_DER[7] => Comparador:inst4.entrada[7]
+SENSOR_DER[8] => Comparador:inst4.entrada[8]
+SENSOR_DER[9] => Comparador:inst4.entrada[9]
+SENSOR_DER[10] => Comparador:inst4.entrada[10]
+SENSOR_DER[11] => Comparador:inst4.entrada[11]
+sens_Izq <= Comparador:inst5.salida
+SENSOR_IZQ[0] => Comparador:inst5.entrada[0]
+SENSOR_IZQ[1] => Comparador:inst5.entrada[1]
+SENSOR_IZQ[2] => Comparador:inst5.entrada[2]
+SENSOR_IZQ[3] => Comparador:inst5.entrada[3]
+SENSOR_IZQ[4] => Comparador:inst5.entrada[4]
+SENSOR_IZQ[5] => Comparador:inst5.entrada[5]
+SENSOR_IZQ[6] => Comparador:inst5.entrada[6]
+SENSOR_IZQ[7] => Comparador:inst5.entrada[7]
+SENSOR_IZQ[8] => Comparador:inst5.entrada[8]
+SENSOR_IZQ[9] => Comparador:inst5.entrada[9]
+SENSOR_IZQ[10] => Comparador:inst5.entrada[10]
+SENSOR_IZQ[11] => Comparador:inst5.entrada[11]
 MD[0] <= Motor_c_ADCs:inst1.MD[0]
 MD[1] <= Motor_c_ADCs:inst1.MD[1]
-Der_Cerca => Motor_c_ADCs:inst1.Der_Cerca
-Izq_Cerca => Motor_c_ADCs:inst1.Izq_Cerca
 MI[0] <= Motor_c_ADCs:inst1.MI[0]
 MI[1] <= Motor_c_ADCs:inst1.MI[1]
 
@@ -91,6 +117,64 @@ clk[4] <= pll1.CLK4
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Control_Motor|Comparador:inst4
+reset => salida.OUTPUTSELECT
+reset => valor_entrada[1].LATCH_ENABLE
+reset => valor_entrada[2].LATCH_ENABLE
+reset => valor_entrada[3].LATCH_ENABLE
+reset => valor_entrada[4].LATCH_ENABLE
+reset => valor_entrada[5].LATCH_ENABLE
+reset => valor_entrada[6].LATCH_ENABLE
+reset => valor_entrada[7].LATCH_ENABLE
+reset => valor_entrada[8].LATCH_ENABLE
+reset => valor_entrada[9].LATCH_ENABLE
+reset => valor_entrada[10].LATCH_ENABLE
+reset => valor_entrada[11].LATCH_ENABLE
+reset => valor_entrada[0].LATCH_ENABLE
+entrada[0] => valor_entrada[0].DATAIN
+entrada[1] => valor_entrada[1].DATAIN
+entrada[2] => valor_entrada[2].DATAIN
+entrada[3] => valor_entrada[3].DATAIN
+entrada[4] => valor_entrada[4].DATAIN
+entrada[5] => valor_entrada[5].DATAIN
+entrada[6] => valor_entrada[6].DATAIN
+entrada[7] => valor_entrada[7].DATAIN
+entrada[8] => valor_entrada[8].DATAIN
+entrada[9] => valor_entrada[9].DATAIN
+entrada[10] => valor_entrada[10].DATAIN
+entrada[11] => valor_entrada[11].DATAIN
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Control_Motor|Comparador:inst5
+reset => salida.OUTPUTSELECT
+reset => valor_entrada[1].LATCH_ENABLE
+reset => valor_entrada[2].LATCH_ENABLE
+reset => valor_entrada[3].LATCH_ENABLE
+reset => valor_entrada[4].LATCH_ENABLE
+reset => valor_entrada[5].LATCH_ENABLE
+reset => valor_entrada[6].LATCH_ENABLE
+reset => valor_entrada[7].LATCH_ENABLE
+reset => valor_entrada[8].LATCH_ENABLE
+reset => valor_entrada[9].LATCH_ENABLE
+reset => valor_entrada[10].LATCH_ENABLE
+reset => valor_entrada[11].LATCH_ENABLE
+reset => valor_entrada[0].LATCH_ENABLE
+entrada[0] => valor_entrada[0].DATAIN
+entrada[1] => valor_entrada[1].DATAIN
+entrada[2] => valor_entrada[2].DATAIN
+entrada[3] => valor_entrada[3].DATAIN
+entrada[4] => valor_entrada[4].DATAIN
+entrada[5] => valor_entrada[5].DATAIN
+entrada[6] => valor_entrada[6].DATAIN
+entrada[7] => valor_entrada[7].DATAIN
+entrada[8] => valor_entrada[8].DATAIN
+entrada[9] => valor_entrada[9].DATAIN
+entrada[10] => valor_entrada[10].DATAIN
+entrada[11] => valor_entrada[11].DATAIN
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Control_Motor|Motor_c_ADCs:inst1
