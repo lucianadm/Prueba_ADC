@@ -1,0 +1,6 @@
+
+State Machine - |Control_Motor|Motor_c_ADCs:inst1|fstate
+Name fstate.Derecha_cerca fstate.Izquierda_cerca fstate.Avanza 
+fstate.Avanza 0 0 0 
+fstate.Izquierda_cerca 0 1 1 
+fstate.Derecha_cerca 1 0 1 
