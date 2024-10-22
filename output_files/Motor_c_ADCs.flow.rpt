@@ -1,5 +1,5 @@
 Flow report for Motor_c_ADCs
-Sun Oct 20 18:00:11 2024
+Tue Oct 22 11:22:48 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Oct 20 18:00:11 2024           ;
+; Flow Status                        ; Successful - Tue Oct 22 11:22:48 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Motor_c_ADCs                                    ;
 ; Top-level Entity Name              ; Control_Motor                                   ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 40 / 6,272 ( < 1 % )                            ;
-;     Total combinational functions  ; 40 / 6,272 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 3 / 6,272 ( < 1 % )                             ;
-; Total registers                    ; 3                                               ;
-; Total pins                         ; 34 / 92 ( 37 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                  ;
-; Total PLLs                         ; 1 / 2 ( 50 % )                                  ;
-; Device                             ; EP4CE6E22C6                                     ;
+; Device                             ; EP4CE22F17C6                                    ;
 ; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 138 / 22,320 ( < 1 % )                          ;
+;     Total combinational functions  ; 120 / 22,320 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 93 / 22,320 ( < 1 % )                           ;
+; Total registers                    ; 93                                              ;
+; Total pins                         ; 38 / 154 ( 25 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,32 +64,34 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/20/2024 17:59:56 ;
+; Start date & time ; 10/22/2024 11:22:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Motor_c_ADCs        ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+-------------------------------------+---------------------------------+---------------+---------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name   ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 154239759967022.172945799507528 ; --            ; --            ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --            ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --            ; --             ;
-; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --            ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --            ; --             ;
-; MISC_FILE                           ; PLL.bsf                         ; --            ; --            ; --             ;
-; MISC_FILE                           ; PLL.cmp                         ; --            ; --            ; --             ;
-; MISC_FILE                           ; PLL.ppf                         ; --            ; --            ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; Control_Motor ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; Control_Motor ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; Control_Motor ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --            ; --             ;
-; TOP_LEVEL_ENTITY                    ; Control_Motor                   ; Motor_c_ADCs  ; --            ; --             ;
-+-------------------------------------+---------------------------------+---------------+---------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                      ;
++-------------------------------------+--------------------------------+---------------+---------------+----------------+
+; Assignment Name                     ; Value                          ; Default Value ; Entity Name   ; Section Id     ;
++-------------------------------------+--------------------------------+---------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 57715612342962.172960693613236 ; --            ; --            ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                             ; --            ; --            ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --            ; --             ;
+; IP_TOOL_NAME                        ; ALTPLL                         ; --            ; --            ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                           ; --            ; --            ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --            ; --             ;
+; MISC_FILE                           ; PLL.bsf                        ; --            ; --            ; --             ;
+; MISC_FILE                           ; PLL.cmp                        ; --            ; --            ; --             ;
+; MISC_FILE                           ; PLL.ppf                        ; --            ; --            ; --             ;
+; PARTITION_COLOR                     ; 16764057                       ; --            ; Control_Motor ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; Control_Motor ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; Control_Motor ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --            ; --             ;
+; TOP_LEVEL_ENTITY                    ; Control_Motor                  ; Motor_c_ADCs  ; --            ; --             ;
++-------------------------------------+--------------------------------+---------------+---------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -97,12 +99,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 4919 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4535 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4496 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:08                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 4943 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4539 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4506 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

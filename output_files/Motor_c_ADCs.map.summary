@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Oct 20 17:59:58 2024
+Analysis & Synthesis Status : Successful - Tue Oct 22 11:22:22 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Motor_c_ADCs
 Top-level Entity Name : Control_Motor
 Family : Cyclone IV E
-Total logic elements : 40
-    Total combinational functions : 39
-    Dedicated logic registers : 3
-Total registers : 3
-Total pins : 34
+Total logic elements : 155
+    Total combinational functions : 118
+    Dedicated logic registers : 93
+Total registers : 93
+Total pins : 38
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
